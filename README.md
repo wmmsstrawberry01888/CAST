@@ -86,7 +86,7 @@ The repository is designed around two data scales:
 | **ETTh1**               | https://github.com/zhouhaoyi/ETDataset                                                           | `data/ETTh1.csv`                                              | Table 1 |
 | **Exchange Rate**       | https://github.com/laiguokun/multivariate-time-series-data/tree/master/exchange_rate             | `data/exchange_rate/exchange_rate.csv`                        | Table 1 |
 | **NY Weather**          | https://data.cityofnewyork.us/dataset/Hyperlocal-Temperature-Monitoring/qdq3-9eqn/about_data     | `data/weather/Hyperlocal_Temperature_Monitoring_20240928.csv` | Table 2 |
-| **DMSP-Par**            | https://doi.org/10.5281/zenodo.4281122                                                           | `data/pci/DMSP_final_training.csv`                            | Table 2 |
+| **DMSP-Par**            | https://www.kaggle.com/datasets/saurabhshahane/dmsp-particle-precipitation-aiready-data          | `data/pci/DMSP_final_training.csv`                            | Table 2 |
 | **C919 — Crosswind**    | https://anonymous.4open.science/r/Flight_Data-609D                                               | `data/C919/1.txt`                                             | Table   |
 | **C919 — Gust**         |  https://anonymous.4open.science/r/Flight_Data-609D                                              | `data/C919/2.txt`                                             | Table 3 |
 | **C919 — Icing**        |  https://anonymous.4open.science/r/Flight_Data-609D                                              | `data/C919/3.txt`                                             | Table 3 |
