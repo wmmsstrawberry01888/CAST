@@ -1,0 +1,20 @@
+# Figure 2b: 5-fold cross-validation on NY Weather
+# Usage: python run.py --config configs/fig2b_kfold.yaml --model cast
+
+experiment:
+  name: fig2b_kfold
+  data: weather
+  mode: k_fold
+  k_folds: 5
+  notes: "Fig 2b — Five-fold CV on NY Weather"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 1
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025

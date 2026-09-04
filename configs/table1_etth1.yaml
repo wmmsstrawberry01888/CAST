@@ -1,0 +1,26 @@
+# Table 1: ETTh1 benchmark
+# Usage: python run.py --config configs/table1_etth1.yaml --model cast
+#        python run.py --config configs/table1_etth1.yaml --model autoformer
+#        ... (repeat for all baseline models)
+
+experiment:
+  name: table1_etth1
+  data: etth1
+  mode: standard
+  notes: "Table 1 — Standardized benchmark evaluation on ETTh1"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 30
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025
+
+data:
+  name: etth1
+  num_vertices: 4
+  num_features: 3

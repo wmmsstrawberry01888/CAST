@@ -1,0 +1,21 @@
+# Figure 2a: Multi-horizon robustness (12, 48, 96 steps)
+# Usage: python run.py --config configs/fig2a_horizon.yaml --model cast --model.T_h 12
+#       python run.py --config configs/fig2a_horizon.yaml --model cast --model.T_h 48
+#       python run.py --config configs/fig2a_horizon.yaml --model cast --model.T_h 96
+
+experiment:
+  name: fig2a_horizon
+  data: weather
+  mode: standard
+  notes: "Fig 2a — Multi-horizon evaluation (12/48/96 steps)"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 1
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025

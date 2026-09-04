@@ -1,0 +1,49 @@
+# CAST global default configuration
+# Inherited and overridden by experiment configs
+
+data:
+  name: weather
+  num_vertices: 4
+  num_features: 3
+  points_per_hour: 12
+
+model:
+  V: 4
+  F: 3
+  T_h: 12
+  T_p: 12
+  d_h: 32
+  device: auto
+  N: 200
+  sample_steps: 200
+  epsilon_theta: UGnet
+  beta_end: 0.02
+  beta_schedule: quad
+  sample_strategy: ddpm
+
+train:
+  epochs: 1
+  lr: 1.0e-04
+  batch_size: 64
+  weight_decay: 1.0e-05
+  optimizer: adam
+  early_stop_patience: 10
+  seed: 2025
+  lambda_cdg: 1.0   # weight of the CDG noise-prediction loss L_cdg
+  use_amp: false
+  grad_clip: 0.0
+  lr_scheduler: none
+
+experiment:
+  name: default
+  model: cast
+  data: weather
+  mode: standard
+  k_folds: 5
+  use_diffusion: false
+  use_gat: true
+  use_temporal: true
+  use_spatio: true
+  use_network: true
+  output_dir: ./output
+  log_dir: ./logs

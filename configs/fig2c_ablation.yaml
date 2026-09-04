@@ -1,0 +1,23 @@
+# Figure 2c: Ablation study — FPG, STDC, CDG
+# Usage: python run.py --config configs/fig2c_ablation.yaml --model cast       (full)
+#       python run.py --config configs/fig2c_ablation.yaml --model ogat       (no GAT = no FPG)
+#       python run.py --config configs/fig2c_ablation.yaml --model otem       (no Temporal = no STDC)
+#       python run.py --config configs/fig2c_ablation.yaml --model ospa       (no Spatial)
+#       python run.py --config configs/fig2c_ablation.yaml --model onet       (no Network)
+
+experiment:
+  name: fig2c_ablation
+  data: weather
+  mode: standard
+  notes: "Fig 2c — Ablation study on FPG (GAT), STDC (Temporal), and CDG (Diffusion)"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 1
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025

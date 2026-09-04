@@ -1,0 +1,19 @@
+# Table 2: NY Weather benchmark
+# Usage: python run.py --config configs/table2_weather.yaml --model cast
+
+experiment:
+  name: table2_weather
+  data: weather
+  mode: standard
+  notes: "Table 2 — Aviation-relevant evaluation on NY Weather"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 30
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025

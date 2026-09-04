@@ -1,0 +1,28 @@
+# Table 3: C919 flight-parameter benchmark — Scenario 2 (data/C919/2.txt)
+# Usage: python run.py --config configs/table3_c919_2.yaml --model cast
+#        ... (repeat for any supported baseline model)
+
+experiment:
+  name: table3_c919_2
+  data: c919_2
+  mode: standard
+  notes: "Table 3 — C919 flight test scenario 2"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 30
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025
+  # C919 flight parameters span very large raw ranges (altitude ~0-7865,
+  # sideslip +-175); grad_clip stabilizes the CAST + CDG objective.
+  grad_clip: 1.0
+
+data:
+  name: c919_2
+  num_vertices: 5
+  num_features: 3

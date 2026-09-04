@@ -1,0 +1,22 @@
+# Table 1: Exchange Rate benchmark
+# Usage: python run.py --config configs/table1_exchange.yaml --model cast
+
+experiment:
+  name: table1_exchange
+  data: exchange_rate
+  mode: select
+  notes: "Table 1 — Exchange Rate benchmark evaluation"
+
+model:
+  T_h: 12
+  T_p: 12
+
+train:
+  epochs: 30
+  lr: 1.0e-04
+  batch_size: 64
+  early_stop_patience: 5
+  seed: 2025
+
+data:
+  name: exchange_rate
